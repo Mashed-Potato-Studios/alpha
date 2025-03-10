@@ -1,0 +1,71 @@
+{
+  "name": "@bahamut/alpha",
+  "version": "0.2.0",
+  "description": "CLI tool for installing and managing Nuxt layers",
+  "type": "module",
+  "bin": {
+    "alpha": "./bin/alpha.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "postbuild": "node ./scripts/postbuild.js",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "node ./scripts/fix-lint.js",
+    "clean": "rm -rf .turbo node_modules dist",
+    "test": "node ./scripts/run-tests.js",
+    "test:integration": "node ./scripts/run-tests.js integration",
+    "test:unit": "node ./scripts/run-tests.js unit",
+    "unit-test": "vitest run",
+    "prepublish": "node ./scripts/prepublish.js"
+  },
+  "dependencies": {
+    "citty": "^0.1.4",
+    "consola": "^3.2.3",
+    "giget": "^1.1.3",
+    "pathe": "^1.1.1",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "semver": "^7.5.4",
+    "test-layer": "file:/Users/vantolbennett/Developer/Mashed_Potato_Studios/bahamut/packages/utils/alpha/test-projects/test-layer"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.19",
+    "@types/semver": "^7.5.1",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.42.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.6",
+    "vitest": "^1.2.1"
+  },
+  "keywords": [
+    "nuxt",
+    "layer",
+    "cli",
+    "bahamut"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mashed-potato-studios/bahamut.git",
+    "directory": "packages/utils/alpha"
+  },
+  "bugs": {
+    "url": "https://github.com/mashed-potato-studios/bahamut/issues"
+  },
+  "homepage": "https://github.com/mashed-potato-studios/bahamut/tree/main/packages/utils/alpha#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
