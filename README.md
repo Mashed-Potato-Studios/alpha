@@ -17,24 +17,6 @@ yarn alpha <command>
 pnpm alpha <command>
 ```
 
-### In Non-Bahamut Projects
-
-You can install Alpha globally or as a project dependency:
-
-```bash
-# Install globally with npm
-npm install -g @bahamut/alpha
-
-# Install globally with yarn
-yarn global add @bahamut/alpha
-
-# Install globally with pnpm
-pnpm add -g @bahamut/alpha
-
-# Install as a project dependency
-npm install --save-dev @bahamut/alpha
-```
-
 ## Usage
 
 ```bash
